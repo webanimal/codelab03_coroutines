@@ -34,7 +34,7 @@ interface SleepDao {
 	fun getTonight(): SleepyNightEntity?
 	
 	@Query("SELECT * FROM daily_sleep_quality_table WHERE _id = :id")
-	fun getById(id: Long)
+	fun getById(id: Long): SleepyNightEntity?
 	
 	@Query("SELECT * FROM daily_sleep_quality_table")
 	fun getAll(): LiveData<List<SleepyNightEntity>>
