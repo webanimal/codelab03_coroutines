@@ -1,4 +1,4 @@
-package com.example.android.trackmysleepquality.data.room
+package com.example.android.trackmysleepquality.data.database
 
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4

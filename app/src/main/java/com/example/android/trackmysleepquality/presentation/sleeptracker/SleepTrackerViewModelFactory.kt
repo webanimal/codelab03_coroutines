@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.trackmysleepquality.sleeptracker
+package com.example.android.trackmysleepquality.presentation.sleeptracker
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
@@ -28,13 +28,14 @@ import com.example.android.trackmysleepquality.data.sleep.db.SleepDao
  */
 class SleepTrackerViewModelFactory(
 	private val dataSource: SleepDao,
-	private val application: Application) : ViewModelProvider.Factory {
-    @Suppress("unchecked_cast")
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(SleepTrackerViewModel::class.java)) {
-            return SleepTrackerViewModel(dataSource, application) as T
-        }
-        throw IllegalArgumentException("Unknown ViewModel class")
-    }
+	private val application: Application
+) : ViewModelProvider.Factory {
+	
+	@Suppress("unchecked_cast")
+	override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+		if (modelClass.isAssignableFrom(SleepTrackerViewModel::class.java)) {
+			return SleepTrackerViewModel(dataSource, application) as T
+		}
+		throw IllegalArgumentException("Unknown ViewModel class")
+	}
 }
-
