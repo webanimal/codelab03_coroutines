@@ -14,9 +14,19 @@
  * limitations under the License.
  */
 
-package com.example.android.trackmysleepquality.database
+package com.example.android.trackmysleepquality.data.sleep.db
 
-import androidx.room.Dao
+import android.provider.BaseColumns
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-@Dao
-interface SleepDatabaseDao
+@Entity(tableName = "daily_sleep_quality_table")
+data class SleepyNightEntity(
+	@PrimaryKey(autoGenerate = true)
+	@ColumnInfo(name = BaseColumns._ID)
+	val nightId: Long = 0L,
+	val startTimeMillis: Long = System.currentTimeMillis(),
+	val endTimeMillis: Long = startTimeMillis,
+	val sleepQualityRating: Int = -1
+)

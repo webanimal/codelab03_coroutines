@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.example.android.trackmysleepquality
+package com.example.android.trackmysleepquality.core
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-
+import com.example.android.trackmysleepquality.R
 
 /**
  * This is the toy app for lesson 6 of the
@@ -36,11 +36,6 @@ import androidx.appcompat.app.AppCompatActivity
  * - ViewModel Factory
  * - Using Backing Properties to protect MutableLiveData
  * - Observable state LiveData variables to trigger navigation
- */
-
-/**
- * This main activity is just a container for our fragments,
- * where the real action is.
  */
 class MainActivity : AppCompatActivity() {
 

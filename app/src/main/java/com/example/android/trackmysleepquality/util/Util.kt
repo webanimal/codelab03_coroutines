@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package com.example.android.trackmysleepquality
+package com.example.android.trackmysleepquality.util
 
 import android.annotation.SuppressLint
 import android.content.res.Resources
+import com.example.android.trackmysleepquality.R
 import java.text.SimpleDateFormat
 
 /**
